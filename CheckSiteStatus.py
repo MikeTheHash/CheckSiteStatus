@@ -26,7 +26,7 @@ print(Fore.MAGENTA + "----------------------------------------------------------
 check()
 try:
 	while True:
-		input2 = input("Do you want to see the status of other sites? [Y/N] > ")
+		input2 = input(Fore.MAGENTA + "Do you want to see the status of other sites? [Y/N] > ")
 		if input2 == "Y" or input2 == "Yes" or input2 == "YES" or "y":
 			check()
 		else:
