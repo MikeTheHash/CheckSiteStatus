@@ -6,7 +6,7 @@ from colorama import Fore, Back, Style
 os.system("figlet CheckSiteStatus")
 print("                                                         By MikeTheHash")
 def check():
-	user_input = input("Type the link (With http/https) > ")
+	user_input = input(Fore.MAGENTA + "Type the link (With http/https) > ")
 	print(Style.RESET_ALL)
 	try:
 		r = requests.get(user_input)
@@ -26,9 +26,16 @@ print(Fore.MAGENTA + "----------------------------------------------------------
 check()
 try:
 	while True:
-		input2 = input(Fore.MAGENTA + "Do you want to see the status of other sites? [Y/N] > ")
-		if input2 == "Y" or input2 == "Yes" or input2 == "YES" or "y":
-			check()
+		input2 = input("Do you want to see the status of other sites? [Y/N] > ")
+		if input2 == "Y" or input2 == "Yes" or input2 == "YES" or input2 == "y":
+			input3 = input("Do you want to clear the terminal? [Y/N] > ")
+			if input3 == "Y" or input3 == "y" or input3 == "yes" or input3 == "Yes" or input3 == "YES":
+				os.system("clear")
+				os.system("figlet CheckSiteStatus")
+				print(Fore.MAGENTA + "----------------------------------------------------------------------------------")
+				check()
+			else:
+				check()
 		else:
 			exit()
 except:
