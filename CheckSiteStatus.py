@@ -13,7 +13,7 @@ def check():
 	except:
 		print(Fore.WHITE + Back.RED + "Error: Make sure you have entered an existing URL by also writing the http / https protocol") 
 	try:
-		print(f"The site responded with status: " + Fore.BLUE + f"{r}" + Style.RESET_ALL)
+		print(f"The site responded with status: " + Fore.BLUE + f"{r.status_code}" + Style.RESET_ALL)
 		other_user_input = input("Do you want the list of meanings of the status codes? [Y/N] > ")
 		if other_user_input == "Y" or other_user_input == "Yes" or other_user_input == "YES" or other_user_input == "y":
 			print("\n")
